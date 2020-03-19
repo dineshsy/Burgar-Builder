@@ -8,7 +8,7 @@ class DrawerToggle extends Component {
     }
   render() {
     return (
-      <div className={this.state.class_name ? classes.Container : classes.Change} onClick={ this.props.toggle}>
+      <div className={[this.state.class_name ? classes.Container : classes.Change,classes.NoSelect].join(' ')} onClick={ this.props.toggle}>
         <div className={classes.Bar1}></div>
         <div className={classes.Bar2}></div>
         <div className={classes.Bar3}></div>

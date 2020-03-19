@@ -1,6 +1,18 @@
 .Container {
     display: block;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.NoSelect {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none;
 }
 
 .Bar1,
@@ -11,6 +23,7 @@
     background-color: #fff;
     margin: 6px 0;
     transition: 0.4s;
+    outline: none;
 }
 
 @media (min-width: 500px) {
