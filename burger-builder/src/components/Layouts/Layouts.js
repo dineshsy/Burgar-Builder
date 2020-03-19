@@ -6,20 +6,23 @@ import SideDrawer from "../SideDrawer/SideDrawer";
 
 class Layout extends Component {
   state = {
-    showSideBar : true
-  }
+    showSideBar: false
+  };
 
   showSideBarHandler = () => {
     let showSideBar = this.state.showSideBar;
     showSideBar = !showSideBar;
-    this.setState({showSideBar : showSideBar})
-  }
+    this.setState({ showSideBar: showSideBar });
+  };
 
   render() {
     return (
       <Aux>
-        <Toolbar /> 
-        <SideDrawer  open={this.state.showSideBar} click = {this.showSideBarHandler} />
+        <Toolbar toggler={this.showSideBarHandler} />
+        <SideDrawer
+          open={this.state.showSideBar}
+          click={this.showSideBarHandler}
+        />
         <main className={classes.contents}>{this.props.children}</main>
       </Aux>
     );
