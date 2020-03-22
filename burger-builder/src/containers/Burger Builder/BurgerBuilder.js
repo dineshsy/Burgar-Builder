@@ -7,6 +7,7 @@ import Burger from "../../components/Burger/Burger";
 import BuildControls from "../../components/Burger/BuildControls/BuildControls";
 import Modal from "../../components/UI/Modal/Modal";
 import OrderSummary from "../../components/Burger/OrderSummary/OrderSummary";
+import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
 
 const INGREDIENTS_PRICE = {
   cheese: 30,
@@ -93,11 +94,13 @@ class BurgerBuilder extends Component {
     axios
       .post("/order.json", order)
       .then(Response => {
-        console.log(Response);
         this.setState({ loading: false, purchasing: false });
       })
-      .catch(error => console.log(error));
+      .catch(error => {
+        this.setState({ loading: false, purchasing: false });
+      });
   };
+
   render() {
     const disabledInfo = {
       ...this.state.ingredients
@@ -140,4 +143,4 @@ class BurgerBuilder extends Component {
   }
 }
 
-export default BurgerBuilder;
+export default withErrorHandler(BurgerBuilder, axios);
