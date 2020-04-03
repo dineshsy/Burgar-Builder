@@ -1,0 +1,48 @@
+.Burger {
+    width: 100%;
+    height: 450px;
+    margin: auto;
+    font-size: 1.2rem;
+    overflow: auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+.Checkout {
+    text-align: center;
+}
+
+@media (min-width: 320px) and (min-height: 320px) {
+    .Burger {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (min-width: 320px) and (min-height: 890px) {
+    .Burger {
+        width: 280px;
+        height: 300px;
+    }
+}
+
+@media (min-width: 500px) and (min-height: 320px) {
+    .Burger {
+        width: 350px;
+        height: 300px;
+    }
+}
+
+@media (min-width: 500px) and (min-height: 401px) {
+    .Burger {
+        width: 450px;
+        height: 300px;
+    }
+}
+
+@media (min-width: 1000px) and (min-height: 600px) {
+    .Burger {
+        width: 400px;
+        height: 300px;
+    }
+}
