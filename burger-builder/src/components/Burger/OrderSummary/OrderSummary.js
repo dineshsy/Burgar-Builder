@@ -13,14 +13,17 @@ const orderSummary = props => {
 
   return (
     <Aux>
-      <h3>Your Order</h3>
+      <h3 style={{margin : "10px auto"}}>Your Order</h3>
       <p>Your delecious order with following ingredients</p>
       <ul>{ingredientSummary}</ul>
   <p><strong>Total Price : {props.price.toFixed(2)}</strong></p>
-      <p>Proceed to checkout?</p>
-      <Button btnType={"Danger"} clicked = {props.cancel}>CANCEL</Button>
+      <p style={{margin: "0px"}}>Proceed to checkout?</p>
+      <div
+      style={{display : "flex", justifyContent: "space-around", width:"100%"}}>
+         <Button btnType={"Danger"} clicked = {props.cancel}>CANCEL</Button>
       <Button btnType={"Success"} clicked = {props.continue}>CONTINUE</Button>
-    </Aux>
+      </div>
+     </Aux>
   );
 };
 
