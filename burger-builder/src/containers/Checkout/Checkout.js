@@ -11,7 +11,7 @@ class Checkout extends Component {
         price : null
     }
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         const query = new URLSearchParams(this.props.location.search);
         // console.log(query.entries());
         const ingredients = {};

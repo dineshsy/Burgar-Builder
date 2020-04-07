@@ -26,7 +26,7 @@ class BurgerBuilder extends Component {
     error: false
   };
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     axios
       .get("/ingredients.json")
       .then(response => {
